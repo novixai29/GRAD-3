@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  >
+
+  <meta
+    name="description"
+    content="An interactive graduation invitation built around completing 100% of degree credits."
+  >
+
+  <meta name="theme-color" content="#080a0d">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Degree Completed — Graduation Invitation">
+  <meta
+    property="og:description"
+    content="140 of 140 credits completed. Graduation unlocked."
+  >
+
+  <title>Degree Completed — Graduation Invitation</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="background-grid" aria-hidden="true"></div>
+  <div class="noise-layer" aria-hidden="true"></div>
+
+  <main class="page-shell">
+
+    <!-- =================================================
+         HEADER
+    ================================================== -->
+    <header class="topbar">
+
+      <a
+        href="#progress"
+        class="brand"
+        aria-label="Go to degree progress"
+      >
+        <span class="brand-icon" aria-hidden="true">
+          <span></span>
+        </span>
+
+        <span class="brand-copy">
+          <small>ACADEMIC SYSTEM</small>
+          <strong>DEGREE PROGRESS</strong>
+        </span>
+      </a>
+
+      <div class="top-status">
+        <span class="top-status-dot"></span>
+        <span>ACTIVE RECORD</span>
+      </div>
+
+    </header>
+
+
+    <!-- =================================================
+         OPENING
+    ================================================== -->
+    <section
+      class="progress-hero"
+      id="progress"
+      aria-labelledby="progressTitle"
+    >
+
+      <div class="progress-hero__intro">
+
+        <span class="eyebrow">
+          DEGREE COMPLETION SYSTEM
+        </span>
+
+        <h1 id="progressTitle">
+          Every credit
+          <span>counted.</span>
+        </h1>
+
+        <p>
+          Years of study reduced to one final academic number.
+        </p>
+
+      </div>
+
+
+      <!-- MAIN PROGRESS SYSTEM -->
+      <div class="progress-system">
+
+        <div class="progress-ring-shell">
+
+          <svg
+            class="progress-ring"
+            viewBox="0 0 300 300"
+            aria-hidden="true"
+          >
+
+            <circle
+              class="progress-ring__track"
+              cx="150"
+              cy="150"
+              r="128"
+            ></circle>
+
+            <circle
+              class="progress-ring__value"
+              id="progressCircle"
+              cx="150"
+              cy="150"
+              r="128"
+            ></circle>
+
+          </svg>
+
+
+          <div class="progress-center">
+
+            <span class="progress-label">
+              DEGREE PROGRESS
+            </span>
+
+            <strong
+              class="credit-value"
+              id="creditValue"
+            >
+              0
+            </strong>
+
+            <div class="credit-total">
+              <span>/</span>
+              <strong id="totalCredits">
+                140
+              </strong>
+              <span>CREDITS</span>
+            </div>
+
+            <div
+              class="percentage"
+              id="percentage"
+            >
+              0%
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="progress-console">
+
+          <div class="progress-console__status">
+
+            <span
+              class="system-light"
+              id="systemLight"
+            ></span>
+
+            <span id="systemMessage">
+              Academic record ready
+            </span>
+
+          </div>
+
+
+          <button
+            class="start-button"
+            id="startButton"
+            type="button"
+          >
+
+            <span>
+              PROCESS DEGREE CREDITS
+            </span>
+
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path d="M5 12H19"></path>
+              <path d="M14 7L19 12L14 17"></path>
+            </svg>
+
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div
+        class="completion-banner"
+        id="completionBanner"
+        aria-live="polite"
+      >
+
+        <span>ACADEMIC STATUS</span>
+
+        <strong>
+          DEGREE COMPLETED
+        </strong>
+
+        <small>
+          100% OF REQUIRED CREDITS VERIFIED
+        </small>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+         GRADUATE IDENTITY
+    ================================================== -->
+    <section
+      class="graduate-record"
+      id="graduateRecord"
+    >
+
+      <div class="section-index">
+        01
+      </div>
+
+
+      <div class="record-heading">
+
+        <span class="eyebrow">
+          COMPLETION RECORD
+        </span>
+
+        <h2>
+          Degree completed by
+          <span data-field="graduateName">
+            Mohammed Ahmed
+          </span>
+        </h2>
+
+      </div>
+
+
+      <div class="record-grid">
+
+        <article class="record-cell">
+
+          <span>GRADUATE</span>
+
+          <strong data-field="graduateName">
+            Mohammed Ahmed
+          </strong>
+
+        </article>
+
+
+        <article class="record-cell">
+
+          <span>DEGREE</span>
+
+          <strong data-field="degree">
+            Bachelor of Medicine
+          </strong>
+
+        </article>
+
+
+        <article class="record-cell">
+
+          <span>FACULTY</span>
+
+          <strong data-field="faculty">
+            College of Medicine
+          </strong>
+
+        </article>
+
+
+        <article class="record-cell">
+
+          <span>UNIVERSITY</span>
+
+          <strong data-field="university">
+            University of Mosul
+          </strong>
+
+        </article>
+
+
+        <article class="record-cell">
+
+          <span>GRADUATION CLASS</span>
+
+          <strong data-field="classYear">
+            Class of 2027
+          </strong>
+
+        </article>
+
+
+        <article class="record-cell">
+
+          <span>FINAL CREDITS</span>
+
+          <strong>
+            <span data-field="requiredCredits">
+              140
+            </span>
+            /
+            <span data-field="requiredCredits">
+              140
+            </span>
+          </strong>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+         ACADEMIC JOURNEY
+    ================================================== -->
+    <section class="journey-section">
+
+      <div class="journey-header">
+
+        <div>
+
+          <span class="eyebrow">
+            ACADEMIC JOURNEY
+          </span>
+
+          <h2>
+            Four years.
+            <span>One completed degree.</span>
+          </h2>
+
+        </div>
+
+
+        <div class="journey-controls">
+
+          <button
+            type="button"
+            id="journeyPrev"
+            aria-label="Previous academic year"
+          >
+            ←
+          </button>
+
+          <button
+            type="button"
+            id="journeyNext"
+            aria-label="Next academic year"
+          >
+            →
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div
+        class="journey-track"
+        id="journeyTrack"
+        tabindex="0"
+        aria-label="Academic year timeline"
+      >
+
+        <!-- Generated by JavaScript -->
+
+      </div>
+
+
+      <div class="journey-progress">
+
+        <span
+          id="journeyProgressBar"
+        ></span>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+         100% STATEMENT
+    ================================================== -->
+    <section class="statement">
+
+      <div class="statement-top">
+
+        <span>
+          FINAL COMPLETION
+        </span>
+
+        <span>
+          VERIFIED
+        </span>
+
+      </div>
+
+
+      <div class="statement-number">
+        100<span>%</span>
+      </div>
+
+
+      <div class="statement-bottom">
+
+        <p>
+          The academic requirements are complete.
+          The next milestone is the celebration.
+        </p>
+
+        <strong>
+          DEGREE COMPLETED
+        </strong>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+         CEREMONY
+    ================================================== -->
+    <section class="ceremony-section">
+
+      <div class="section-index">
+        02
+      </div>
+
+
+      <div class="ceremony-heading">
+
+        <span class="eyebrow">
+          NEXT MILESTONE
+        </span>
+
+        <h2>
+          Graduation
+          <span>celebration.</span>
+        </h2>
+
+        <p data-field="tagline">
+          One chapter ends. Another begins.
+        </p>
+
+      </div>
+
+
+      <div class="ceremony-grid">
+
+        <article class="ceremony-date-card">
+
+          <span
+            class="date-month"
+            id="ceremonyMonth"
+          >
+            JUL
+          </span>
+
+          <strong
+            class="date-day"
+            id="ceremonyDay"
+          >
+            15
+          </strong>
+
+          <span
+            class="date-year"
+            id="ceremonyYear"
+          >
+            2027
+          </span>
+
+        </article>
+
+
+        <div class="ceremony-info">
+
+          <div class="ceremony-row">
+
+            <span>DATE</span>
+
+            <strong id="formattedDate">
+              Thursday, July 15, 2027
+            </strong>
+
+          </div>
+
+
+          <div class="ceremony-row">
+
+            <span>TIME</span>
+
+            <strong id="formattedTime">
+              6:00 PM
+            </strong>
+
+          </div>
+
+
+          <div class="ceremony-row">
+
+            <span>VENUE</span>
+
+            <strong data-field="venue">
+              Grand Celebration Hall
+            </strong>
+
+          </div>
+
+
+          <div class="ceremony-row">
+
+            <span>LOCATION</span>
+
+            <strong id="fullAddress">
+              Mosul, Nineveh, Iraq
+            </strong>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+         CEREMONY PROGRESS
+    ================================================== -->
+    <section class="ceremony-progress-section">
+
+      <div class="ceremony-progress-head">
+
+        <div>
+
+          <span class="eyebrow">
+            TIME TO CEREMONY
+          </span>
+
+          <h2>
+            Final milestone
+            <span>in progress.</span>
+          </h2>
+
+        </div>
+
+
+        <strong
+          class="ceremony-percentage"
+          id="ceremonyPercentage"
+        >
+          0%
+        </strong>
+
+      </div>
+
+
+      <div class="time-progress">
+
+        <span
+          id="timeProgressBar"
+        ></span>
+
+      </div>
+
+
+      <div class="countdown">
+
+        <div class="countdown-cell">
+
+          <strong id="days">
+            00
+          </strong>
+
+          <span>DAYS</span>
+
+        </div>
+
+
+        <div class="countdown-cell">
+
+          <strong id="hours">
+            00
+          </strong>
+
+          <span>HOURS</span>
+
+        </div>
+
+
+        <div class="countdown-cell">
+
+          <strong id="minutes">
+            00
+          </strong>
+
+          <span>MINUTES</span>
+
+        </div>
+
+
+        <div class="countdown-cell">
+
+          <strong id="seconds">
+            00
+          </strong>
+
+          <span>SECONDS</span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+         ACTIONS
+    ================================================== -->
+    <section class="access-section">
+
+      <div class="section-index">
+        03
+      </div>
+
+
+      <div class="access-heading">
+
+        <span class="eyebrow">
+          CEREMONY ACCESS
+        </span>
+
+        <h2>
+          Continue
+          <span>to celebration.</span>
+        </h2>
+
+      </div>
+
+
+      <div class="action-grid">
+
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="action-card"
+          id="mapsButton"
+        >
+
+          <span class="action-number">
+            01
+          </span>
+
+          <div>
+
+            <small>
+              DESTINATION
+            </small>
+
+            <strong>
+              OPEN CEREMONY LOCATION
+            </strong>
+
+          </div>
+
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path d="M5 19L19 5"></path>
+            <path d="M9 5H19V15"></path>
+          </svg>
+
+        </a>
+
+
+        <button
+          type="button"
+          class="action-card"
+          id="calendarButton"
+        >
+
+          <span class="action-number">
+            02
+          </span>
+
+          <div>
+
+            <small>
+              CALENDAR
+            </small>
+
+            <strong>
+              ADD TO CALENDAR
+            </strong>
+
+          </div>
+
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <rect
+              x="4"
+              y="5"
+              width="16"
+              height="15"
+              rx="2"
+            ></rect>
+
+            <path d="M8 3V7"></path>
+            <path d="M16 3V7"></path>
+            <path d="M4 10H20"></path>
+          </svg>
+
+        </button>
+
+
+        <button
+          type="button"
+          class="action-card"
+          id="shareButton"
+        >
+
+          <span class="action-number">
+            03
+          </span>
+
+          <div>
+
+            <small>
+              INVITATION
+            </small>
+
+            <strong>
+              SHARE INVITATION
+            </strong>
+
+          </div>
+
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <circle cx="18" cy="5" r="2.5"></circle>
+            <circle cx="6" cy="12" r="2.5"></circle>
+            <circle cx="18" cy="19" r="2.5"></circle>
+
+            <path d="M8.2 10.8L15.8 6.2"></path>
+            <path d="M8.2 13.2L15.8 17.8"></path>
+          </svg>
+
+        </button>
+
+      </div>
+
+
+      <div
+        class="share-feedback"
+        id="shareFeedback"
+        aria-live="polite"
+      ></div>
+
+    </section>
+
+
+    <!-- =================================================
+         FOOTER
+    ================================================== -->
+    <footer class="closing">
+
+      <span class="eyebrow">
+        DEGREE STATUS
+      </span>
+
+      <h2>
+        140 / 140
+        <span>Complete.</span>
+      </h2>
+
+      <p>
+
+        <strong data-field="graduateName">
+          Mohammed Ahmed
+        </strong>
+
+        <span>—</span>
+
+        <span data-field="classYear">
+          Class of 2027
+        </span>
+
+      </p>
+
+      <small>
+        DIGITAL DEGREE COMPLETION SYSTEM
+      </small>
+
+    </footer>
+
+  </main>
+
+
+  <!-- GSAP -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    defer
+  ></script>
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+    defer
+  ></script>
+
+  <script src="script.js" defer></script>
+
+</body>
+</html>
